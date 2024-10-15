@@ -76,6 +76,8 @@ jobs:
       - name: Deploy
         run: echo "Deploying..."
   report:
+    #prerequisitos para este job
+    needs: [lint, deploy]
     #solo si algun otro job falla se ejecuta este job
     if: failure()
     runs-on: ubuntu-latest
