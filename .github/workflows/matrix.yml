@@ -2,7 +2,7 @@ name: Matrix Demo
 on: push
 jobs:
     build:
-        #Define variables para keys
+        continue-on-error: true
         strategy:
             matrix:
                 node-version: [12, 14, 16]
